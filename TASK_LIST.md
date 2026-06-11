@@ -19,7 +19,7 @@
 ## 阶段一：项目骨架搭建
 
 ### T1.1 父工程POM配置
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 创建Maven父工程 `mini-ofbiz-entity`，统一管理所有子模块依赖版本。采用 `dependencyManagement` 和 `pluginManagement` 集中声明版本号，确保多模块依赖一致性。
