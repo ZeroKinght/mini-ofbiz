@@ -142,7 +142,7 @@
 ## 阶段二：元数据核心开发
 
 ### T2.1 ModelEntity实体元数据类
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 `ModelEntity` 是实体元数据的核心容器，封装一个XML实体定义的全部信息。包含实体名、表名、字段列表、主键列表、索引列表等。
@@ -175,7 +175,7 @@ public class ModelEntity {
 ---
 
 ### T2.2 ModelField字段元数据类
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 `ModelField` 描述单个字段的完整元数据，包括字段名、列名、语义类型、是否主键、是否非空、默认值等。
@@ -206,7 +206,7 @@ public class ModelField {
 ---
 
 ### T2.3 ModelIndex索引元数据类
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 `ModelIndex` 描述数据库索引结构，支持普通索引和唯一索引。
@@ -229,7 +229,7 @@ public class ModelIndex {
 ---
 
 ### T2.4 FieldType语义类型枚举
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 定义OFBiz标准语义类型枚举，用于声明字段的数据语义。语义类型独立于具体数据库，由引擎自动映射到数据库类型。
@@ -275,7 +275,7 @@ public enum FieldType {
 ---
 
 ### T2.5 EntityModelBuilder元数据构建器
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 提供流式API构建ModelEntity，方便单元测试和代码中动态创建实体模型。
@@ -307,7 +307,7 @@ public class EntityModelBuilder {
 ---
 
 ### T2.6 XML结构设计与示例文件
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 设计 `entitymodel.xml` 的XML Schema，兼容OFBiz基础格式。创建示例实体定义文件供解析测试。
@@ -338,7 +338,7 @@ public class EntityModelBuilder {
 ---
 
 ### T2.7 XmlEntityParser核心解析器
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 实现基于Dom4j的XML解析器，将entitymodel.xml解析为ModelEntity对象列表。
@@ -374,7 +374,7 @@ public class XmlEntityParser {
 ---
 
 ### T2.8 ModelReader全局元数据读取器
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 `ModelReader` 是元数据的全局访问入口，负责加载、缓存、查询所有实体模型。采用线程安全的ConcurrentHashMap存储。

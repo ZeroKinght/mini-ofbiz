@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Mini-OFBiz 实体定义文件示例
+  兼容OFBiz基础格式
+-->
+<entitymodel>
+    <!-- 测试用户实体 -->
+    <entity entity-name="TestUser" table-name="test_user" package="test">
+        <description>测试用户表</description>
+
+        <!-- 字段定义 -->
+        <field name="userId" type="id-ne" is-pk="true"/>
+        <field name="username" type="name" not-null="true"/>
+        <field name="email" type="email" not-null="true"/>
+        <field name="password" type="description" not-null="true" encrypt="true"/>
+        <field name="realName" type="name"/>
+        <field name="status" type="indicator" default="A"/>
+        <field name="createTime" type="date-time"/>
+        <field name="updateTime" type="date-time"/>
+
+        <!-- 索引定义 -->
+        <index name="UK_USER_EMAIL" unique="true">
+            <index-field name="email"/>
+        </index>
+        <index name="IDX_USER_STATUS">
+            <index-field name="status"/>
+        </index>
+    </entity>
+
+    <!-- 测试订单实体（演示复合索引） -->
+    <entity entity-name="TestOrder" table-name="test_order" package="test">
+        <description>测试订单表</description>
+
+        <field name="orderId" type="id-ne" is-pk="true"/>
+        <field name="userId" type="id-ne" not-null="true"/>
+        <field name="orderNo" type="name" not-null="true"/>
+        <field name="totalAmount" type="value" not-null="true"/>
+        <field name="status" type="status" default="PENDING"/>
+        <field name="createTime" type="date-time"/>
+        <field name="payTime" type="date-time"/>
+
+        <!-- 复合索引 -->
+        <index name="UK_ORDER_NO" unique="true">
+            <index-field name="orderNo"/>
+        </index>
+        <index name="IDX_USER_STATUS">
+            <index-field name="userId"/>
+            <index-field name="status"/>
+        </index>
+    </entity>
+
+</entitymodel>
