@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mini_ofbiz?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# Mini-OFBiz配置（后续任务将实现）
+mini-ofbiz:
+  entity:
+    # XML实体定义文件路径
+    locations: classpath*:entitydef/**/entitymodel.xml
+    # 自动DDL开关
+    auto-ddl: true
+    # 权限拦截开关
+    rbac-enabled: true
+
+logging:
+  level:
+    com.mini.ofbiz: DEBUG

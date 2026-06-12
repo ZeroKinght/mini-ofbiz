@@ -73,7 +73,7 @@
 ---
 
 ### T1.3 Autoconfig模块骨架创建
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 创建 `mini-ofbiz-entity-autoconfig` 模块，负责SpringBoot自动配置逻辑。依赖SpringBoot4自动配置starter和core模块。
@@ -99,7 +99,7 @@
 ---
 
 ### T1.4 Starter模块创建
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 创建 `mini-ofbiz-entity-starter` 模块，作为用户引入的唯一依赖。Starter仅做依赖聚合，不包含任何代码。
@@ -119,7 +119,7 @@
 ---
 
 ### T1.5 Demo模块创建与启动验证
-**状态：** ⬜ 待开始
+**状态：** ✅ 已完成
 
 **详细设计：**
 创建 `mini-ofbiz-entity-demo` 模块，作为测试演示工程。引入starter依赖、MySQL驱动、SpringBoot Web启动器。
